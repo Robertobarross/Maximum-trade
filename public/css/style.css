@@ -1,0 +1,24 @@
+/* Inicio do estilo do template --------------------------------------------------------------------------------------- */
+
+/* Estilo do topo */
+#topo{width: 100%; height: 130px; border: 1px solid white; background-color: #008080;}
+
+/* Estilo da div dentro da div topo */
+.topo{width: 100%; height: 40px; border: 1px solid white; background-color: white;}
+
+/* Estilo da logomarga */
+.logo{width: 120px;}
+
+/* Estilo do menu */
+.menu{width: 99,9%; height: 25px; border: 1px solid #00CED1; background-color: #00CED1; margin-top: 63px;}
+
+/* Estilo da div centro */
+#centro{width: 90%; height: 300px; border: 1px solid #DCDCDC; margin-top: 30px; margin-left: auto; margin-right: auto;}
+
+/* Estilo do rodapé */
+#rodape{width: 100%; height: 100px; margin-top: 30px; text-align: center;}
+
+/* Estilo padrão para os textos */
+.textos{font-size: 12px; font-family: Arial; color: #808080;}
+
+/* Fim do estilo do template * ---------------------------------------------------------------------------------------- */
