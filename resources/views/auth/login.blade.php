@@ -1,9 +1,15 @@
 <x-guest-layout>
     <x-jet-authentication-card>
         <x-slot name="logo">
-            <x-jet-authentication-card-logo />
-        </x-slot>
 
+            {{--Adaptações feitas na tela de login----------------------------------------------------------------------}}
+            <link rel="stylesheet" href="css/style.css">
+            <img src="img/login.png" class="img-login" alt="">
+            {{--Fim das adaptações feitas na tela de login--------------------------------------------------------------}}
+
+
+            {{--<x-jet-authentication-card-logo />--}}
+        </x-slot>
         <x-jet-validation-errors class="mb-4" />
 
         @if (session('status'))
@@ -28,19 +34,19 @@
             <div class="block mt-4">
                 <label for="remember_me" class="flex items-center">
                     <x-jet-checkbox id="remember_me" name="remember" />
-                    <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
+                    <span class="ml-2 text-sm text-gray-600">{{ __('Lembrar senha') }}</span>
                 </label>
             </div>
 
             <div class="flex items-center justify-end mt-4">
                 @if (Route::has('password.request'))
                     <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
-                        {{ __('Forgot your password?') }}
+                        {{ __('Esqueceu sua senha?') }}
                     </a>
                 @endif
 
                 <x-jet-button class="ml-4">
-                    {{ __('Log in') }}
+                    {{ __('Login') }}
                 </x-jet-button>
             </div>
         </form>
