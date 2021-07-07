@@ -1,7 +1,13 @@
 <x-guest-layout>
     <x-jet-authentication-card>
         <x-slot name="logo">
-            <x-jet-authentication-card-logo />
+
+            {{--Adaptações feitas na tela de login----------------------------------------------------------------------}}
+            <link rel="stylesheet" href="css/style.css">
+            <img src="img/login.png" class="img-login" alt="">
+            {{--Fim das adaptações feitas na tela de login--------------------------------------------------------------}}
+
+            {{--<x-jet-authentication-card-logo />--}}
         </x-slot>
 
         <x-jet-validation-errors class="mb-4" />
@@ -48,11 +54,11 @@
 
             <div class="flex items-center justify-end mt-4">
                 <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
-                    {{ __('Already registered?') }}
+                    {{ __('Já está cadastrado?') }}
                 </a>
 
                 <x-jet-button class="ml-4">
-                    {{ __('Register') }}
+                    {{ __('Cadastrar') }}
                 </x-jet-button>
             </div>
         </form>
