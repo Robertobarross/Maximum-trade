@@ -5,5 +5,4 @@
 @section('content'){{--Extenção do conteúdo--}}
 
 
-
 @endsection {{--Fim da extenção coteúdo--}}
