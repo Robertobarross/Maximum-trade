@@ -12,6 +12,9 @@
 /* Estilo do menu */
 .menu{width: 99,9%; height: 25px; border: 1px solid #00CED1; background-color: #00CED1; margin-top: 63px;}
 
+/*Estilo dos links do menu */
+.links-menu{font-size: 12px; font-family: Arial; text-decoration: none; color: white; padding: 10px; margin-top: auto; float: right;}
+
 /* Estilo da div centro */
 #centro{width: 90%; height: 300px; border: 1px solid #DCDCDC; margin-top: 30px; margin-left: auto; margin-right: auto;}
 
@@ -21,4 +24,14 @@
 /* Estilo padrão para os textos */
 .textos{font-size: 12px; font-family: Arial; color: #808080;}
 
-/* Fim do estilo do template * ---------------------------------------------------------------------------------------- */
+/* Fim do estilo do template  ----------------------------------------------------------------------------------------- */
+
+
+
+/* Início do estilo do login -------------------------------------------------------------------------------------------*/
+
+.img-login{width: 50px;}
+
+/* Fim do estilo do login ----------------------------------------------------------------------------------------------*/
+
+
