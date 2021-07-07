@@ -21,7 +21,7 @@
         </div>
 
         <div class="menu">
-            <a href="/dashboard">Login</a> <a href="#">Cadastrar</a>
+            <a href="#" class="links-menu">SAIR</a> <a href="/dashboard" class="links-menu">LOGIN</a> <a href="/register" class="links-menu">CADASTRO</a>
         </div>
     </div>
     {{--Fim da div top--------------------------------------------------------------------------------------------------}}
@@ -44,7 +44,7 @@
     </div>
     {{--Fim da div rodapé-----------------------------------------------------------------------------------------------}}
 
-    
+
 
 
 </body>
