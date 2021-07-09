@@ -1,8 +1,9 @@
 @extends('template'){{--Extenção do arquivo template--}}
 
-@section('title', 'Maximum-trade'){{--extenção do título--}}
+@section('title', 'Home'){{--Extenção do título--}}
 
-@section('content'){{--Extenção do conteúdo--}}
+@section('content'){{--Conteúdo--}}
 
 
-@endsection {{--Fim da extenção coteúdo--}}
+
+@endsection {{--Conteúdo--}}
