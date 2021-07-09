@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>@yield('title')</title>
+    <title>@yield('title', 'Maximum-trade')</title>
 
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js"></script>
@@ -21,19 +21,34 @@
         </div>
 
         <div class="menu">
-            <a href="#" class="links-menu">SAIR</a> <a href="/dashboard" class="links-menu">LOGIN</a> <a href="/register" class="links-menu">CADASTRO</a>
+            @guest
+            <a href="/dashboard" class="links-menu">LOGIN</a> <a href="/register" class="links-menu">CADASTRO</a>
+            @endguest
+
+            <a href="/" class="links-menu">INICIO</a>
+
+            @auth {{--Arquivo logout, para encerrar a sessão--}}
+            <form action="/logout" method="POST">
+                @csrf
+                <a href="/logout" class="links-menu" onclick="event.preventDefault(); this.closest('form').submit();">SAIR</a>
+            </form>
+            @endauth
         </div>
-    </div>
     {{--Fim da div top--------------------------------------------------------------------------------------------------}}
 
 
 
 
-    {{--Início da div centro da página----------------------------------------------------------------------------------}}
+    @yield('content'){{--Onde vaificar o conteúdo exposto nas outras páginas, para não ficar a mesma do template--------}}
+
+
+
+
+    {{--Início da div centro--------------------------------------------------------------------------------------------}}
     <div id="centro">
 
     </div>
-    {{--Fim da div centro da página-------------------------------------------------------------------------------------}}
+    {{--Fim da div centro-----------------------------------------------------------------------------------------------}}
 
 
 
