@@ -22,9 +22,10 @@
 
         <div class="menu">
             @guest
-            <a href="/dashboard" class="links-menu">LOGIN</a> <a href="/register" class="links-menu">CADASTRO</a>
+            <a href="/dashboard" class="links-menu">LOGIN</a> <a href="/register" class="links-menu">CADASTRE-SE</a>
             @endguest
 
+            <a href="/create-empresa" class="links-menu">CADASTRAR LOJA</a>
             <a href="/" class="links-menu">INICIO</a>
 
             @auth {{--Arquivo logout, para encerrar a sessão--}}
@@ -46,6 +47,31 @@
 
     {{--Início da div centro--------------------------------------------------------------------------------------------}}
     <div id="centro">
+        {{--aqui vão ficar os links para outras pesquisas, tais como: quem somos, contato, etc. --}}
+        <div class="div-links-centro">
+            <h1 class="titulos-centro">EMPRESA</h1>
+            <a href="#" class="links-centro">História</a>
+            <a href="#" class="links-centro">História</a>
+
+        </div>
+
+        <div class="div-links-centro">
+            <h2 class="titulos-centro">QUEM SOMOS</h2>
+            <a href="#" class="links-centro">História</a>
+
+        </div>
+
+        <div class="div-links-centro">
+            <h2 class="titulos-centro">CONTATO</h2>
+            <a href="#" class="links-centro">História</a>
+
+        </div>
+
+        <div class="div-links-centro">
+            <h2 class="titulos-centro">AJUDA</h2>
+            <a href="#" class="links-centro">História</a>
+
+        </div>
 
     </div>
     {{--Fim da div centro-----------------------------------------------------------------------------------------------}}
