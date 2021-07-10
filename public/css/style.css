@@ -16,8 +16,18 @@
 .links-menu{font-size: 12px; font-family: Arial; text-decoration: none; color: white; padding: 10px; margin-top: auto; float: right;}
 .links-menu:hover{color: #808080;}
 
-/* Estilo da div centro
-#centro{width: 90%; height: 300px; border: 1px solid #DCDCDC; margin-top: 30px; margin-left: auto; margin-right: auto;}*/
+/* Estilo da div centro */
+#centro{width: 100%; height: 200px; border: 1px solid #00ced1; background-color: #00ced1; margin-top: 30px; margin-left: auto; margin-right: auto;}
+
+/* Estilo dos titulos da div centro ------------------------------------------------------------------------------------*/
+.titulos-centro{font-size: 13px; font-family: Arial; color: #808080; margin-top: 20px; text-align: center;}
+
+/* estilos das divs do centro */
+.div-links-centro{width: 300px; height: 180px; border: 1px solid #00ced1; float: left; margin-left: 27px;}
+
+/* Estilo dos links das divs do centro */
+.links-centro{font-size: 12px; font-family: Arial; margin-left: 127px; text-decoration: none; color: white;}
+.links-centro:hover{color: #808080;}
 
 /* Estilo do rodapé */
 #rodape{width: 100%; height: 100px; margin-top: 30px; text-align: center;}
@@ -29,10 +39,5 @@
 
 
 
-/* Início do estilo do login -------------------------------------------------------------------------------------------*/
-
+/* Estilo do login -----------------------------------------------------------------------------------------------------*/
 .img-login{width: 50px;}
-
-/* Fim do estilo do login ----------------------------------------------------------------------------------------------*/
-
-
