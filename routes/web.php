@@ -13,10 +13,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+use App\Http\Controllers\EmpresaController;
+
+
+Route::get('/', function () { /* Rota Home */
     return view('home');
 });
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
-})->name('dashboard');
+})->name('dashboard'); /* Rota dashboard */
+
+
+Route::get('/create-empresa', function () {
+    return view('create-empresa');
+})->middleware('auth'); /* Rota criar loja */
+
+
