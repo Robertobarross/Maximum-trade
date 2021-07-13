@@ -22,7 +22,8 @@
 
         <div class="menu">
             @guest
-            <a href="/dashboard" class="links-menu">LOGIN</a> <a href="/register" class="links-menu">CADASTRE-SE</a>
+            <a href="/dashboard" class="links-menu">LOGIN</a>
+            <a href="/register" class="links-menu">CADASTRE-SE</a>
             @endguest
 
             <a href="/create-empresa" class="links-menu">CADASTRAR LOJA</a>
@@ -30,8 +31,8 @@
 
             @auth {{--Arquivo logout, para encerrar a sessão--}}
             <form action="/logout" method="POST">
-                @csrf
-                <a href="/logout" class="links-menu" onclick="event.preventDefault(); this.closest('form').submit();">SAIR</a>
+            @csrf
+            <a href="/logout" class="links-menu" onclick="event.preventDefault(); this.closest('form').submit();">SAIR</a>
             </form>
             @endauth
         </div>
@@ -51,26 +52,29 @@
         <div class="div-links-centro">
             <h1 class="titulos-centro">EMPRESA</h1>
             <a href="#" class="links-centro">História</a>
-            <a href="#" class="links-centro">História</a>
-
+            <br><a href="#" class="links-centro">Novidades</a>
+            <br> <a href="#" class="links-centro">Sobre</a></br>
         </div>
 
         <div class="div-links-centro">
             <h2 class="titulos-centro">QUEM SOMOS</h2>
-            <a href="#" class="links-centro">História</a>
-
+            <a href="#" class="links-centro">Liderança</a>
+            <br><a href="#" class="links-centro">Perfil</a>
+            <br><a href="#" class="links-centro">Nossa visão</a>
         </div>
 
         <div class="div-links-centro">
             <h2 class="titulos-centro">CONTATO</h2>
-            <a href="#" class="links-centro">História</a>
-
+            <a href="#" class="links-centro">E-mail</a>
+            <br><a href="#" class="links-centro">0800 003 021</a>
+            <br><a href="#" class="links-centro">WhatsApp</a>
         </div>
 
         <div class="div-links-centro">
             <h2 class="titulos-centro">AJUDA</h2>
-            <a href="#" class="links-centro">História</a>
-
+            <a href="#" class="links-centro">Perguntas frequentes</a>
+            <br><a href="#" class="links-centro">Suporte</a>
+            <br><a href="#" class="links-centro">SAC</a>
         </div>
 
     </div>
