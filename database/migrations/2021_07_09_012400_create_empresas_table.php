@@ -19,16 +19,16 @@ class CreateEmpresasTable extends Migration
             $table->timestamps();
             $table->text("empresa");
             $table->integer("cpf");
-            $table->text("cnpj");
+            $table->integer("cnpj");
             $table->text("endereco");
             $table->text("cidade");
             $table->text("bairro");
             $table->text("uf");
             $table->text("proprietario");
             $table->integer("numero");
-            $table->string("contrato-social");
-            $table->string("registro-junta-comercial");
-            $table->string("inscricao-estadual");
+            $table->string("contratosocial"); /* Contrato social */
+            $table->string("registrocomercial"); /* Registro na junta comercial */
+            $table->string("inscricaoestadual"); /* Inscrição estadual */
             $table->string("alvara");
             $table->text("complemento");
         });
