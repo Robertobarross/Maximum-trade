@@ -1,5 +1,4 @@
 /* Inicio do estilo do template --------------------------------------------------------------------------------------- */
-
 /* Estilo do topo */
 #topo{width: 100%; height: 130px; border: 1px solid white; background-color: #008080;}
 
@@ -34,10 +33,24 @@
 
 /* Estilo padrão para os textos */
 .textos{font-size: 12px; font-family: Arial; color: #808080;}
-
 /* Fim do estilo do template  ----------------------------------------------------------------------------------------- */
 
 
 
 /* Estilo do login -----------------------------------------------------------------------------------------------------*/
 .img-login{width: 50px;}
+/* Fim do estilo login */
+
+
+
+/* início do estilo do formulário create-empresa */
+/* Estilo da div criar-empresa */
+#criar-empresa{width: 60%; height: auto; border: 1px solid #808080; border-radius: 8px; margin-top: 30px; margin-left: auto; margin-right: auto;}
+
+/* Estilo dos campos do formuário */
+.form-empresa{width: 50%; height: 10px; font-size: 15px; font-family: Arial #808080; padding: 10px; margin-top: 5px; margin-left: 190px;}
+
+/* Estilo dos titulos do formulário criar-empresa */
+.titulos-form{font-size: 15px; font-family: Arial; margin-left: 190px; color: #00CED1;}
+
+.btn-btn{width: auto; height: 30px; background-color: #00CED1; color: white; border-radius: 5px;}
