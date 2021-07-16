@@ -6,7 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>@yield('title', 'Maximum-trade')</title>
 
+    {{--Extensão do arquivo CSS-----------------------------------------------------------------------------------------}}
     <link rel="stylesheet" href="css/style.css">
+    {{--Extensão do arquivo CSS-----------------------------------------------------------------------------------------}}
     <script src="js/script.js"></script>
 
 </head>
@@ -22,17 +24,17 @@
 
         <div class="menu">
             @guest
-            <a href="/dashboard" class="links-menu">LOGIN</a>
-            <a href="/register" class="links-menu">CADASTRE-SE</a>
+            <a href="/dashboard" class="links-menu">Login</a>
+            <a href="/register" class="links-menu">Cadastre-se</a>
             @endguest
 
-            <a href="/create-empresa" class="links-menu">CADASTRAR LOJA</a>
-            <a href="/" class="links-menu">INICIO</a>
+            <a href="/create-empresa" class="links-menu">Cadastrar Loja</a>
+            <a href="/" class="links-menu">Inicio</a>
 
             @auth {{--Arquivo logout, para encerrar a sessão--}}
             <form action="/logout" method="POST">
             @csrf
-            <a href="/logout" class="links-menu" onclick="event.preventDefault(); this.closest('form').submit();">SAIR</a>
+            <a href="/logout" class="links-menu" onclick="event.preventDefault(); this.closest('form').submit();">Sair</a>
             </form>
             @endauth
         </div>
