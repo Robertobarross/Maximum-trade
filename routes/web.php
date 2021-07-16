@@ -29,4 +29,7 @@ Route::get('/create-empresa', function () {
     return view('create-empresa');
 })->middleware('auth'); /* Rota criar loja */
 
+Route::post('/empresas', [EmpresaController::class, 'store'])->middleware('auth'); // Rota Controller das postagens //
+
+
 
