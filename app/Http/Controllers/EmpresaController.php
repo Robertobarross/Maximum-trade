@@ -9,6 +9,13 @@ use App\Models\User; // Necessário para defineir o dono da Empresa //
 
 class EmpresaController extends Controller
 {
+
+
+
+    public function create(){ // Rota da página criar eventos //
+        return view('create-empresa');
+    }
+
     public function store(Request $request){
 
         $empresa = new Empresa();
@@ -30,21 +37,13 @@ class EmpresaController extends Controller
 
     }
 
-   /* $User = auth()->user(); // Para separar evento por usuário //
-    $event->user_id = $user->id;
+
+    //$User = auth()->user(); // Para separar evento por usuário //
+   // $empresa->user_id = $user->id;
 
 
-    $empresa->save();// Para que a postagem fique gravada no banco de dados //
+  //  $empresa->save();// Para que a postagem fique gravada no banco de dados //
 
     /* Após a postagem, o usuário será redirecionado para página criar eventos. Aparecerá a mensagem 'Evento criado com sucesso!'  */
-  /*  return redirect('/events/create')->with('msg', 'Evento criado com sucesso!');*/
-
+//  return redirect('/events/create')->with('msg', 'Evento criado com sucesso!');
 }
-
-
-
-
-
-
-
-
