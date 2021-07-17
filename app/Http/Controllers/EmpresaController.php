@@ -9,17 +9,19 @@ use App\Models\User; // Necessário para defineir o dono da Empresa //
 
 class EmpresaController extends Controller
 {
-
-
-
+    /*-----------------------------------------------------------------------------------------------------------------*/
     public function create(){ // Rota da página criar eventos //
         return view('create-empresa');
     }
+    /*-----------------------------------------------------------------------------------------------------------------*/
 
-    public function store(Request $request){
 
-        $empresa = new Empresa();
+    /*-----------------------------------------------------------------------------------------------------------------*/
+    public function store(Request $request){ // Para inserir informação do formulário no Banco de dados //
 
+        $empresa = new Empresa;
+
+        // Variáveis //
         $empresa->empresa = $request->empresa;
         $empresa->cpf = $request->cpf;
         $empresa->cnpj = $request->cnpj;
@@ -35,15 +37,29 @@ class EmpresaController extends Controller
         $empresa->alvara = $request->alvara;
         $empresa->complemento = $request->complemento;
 
+        $user = auth()->user(); // Para separar empresa por usuário //
+        $empresa->user_id = $user->id;
+
+        $empresa->save();// salva os arquivos no banco //
+        return redirect('/create-empresa')->with('msg', 'Loja cadastradas com sucesso!');// Retornar para página criar empresa //
     }
+/*-----------------------------------------------------------------------------------------------------------------*/
 
 
-    //$User = auth()->user(); // Para separar evento por usuário //
-   // $empresa->user_id = $user->id;
+/*-----------------------------------------------------------------------------------------------------------------*/
+    public function dashboard(){
+        $empresa = new Empresa;
+
+        $empresas = Empresa::all();
+
+        $user = auth()->user(); // Separar empresa por usuário //
+        $empresa->user_id = $user->id; // Buscar usuário //
+
+        $empresaOwner = User::where('id', $empresa->user_id)->first()->toArray();
+
+        return view('dashboard', ['empresas' => $empresas, 'empresaOwner' => $empresaOwner]);
+    }
+/*-----------------------------------------------------------------------------------------------------------------*/
 
 
-  //  $empresa->save();// Para que a postagem fique gravada no banco de dados //
-
-    /* Após a postagem, o usuário será redirecionado para página criar eventos. Aparecerá a mensagem 'Evento criado com sucesso!'  */
-//  return redirect('/events/create')->with('msg', 'Evento criado com sucesso!');
 }
