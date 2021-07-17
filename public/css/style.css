@@ -58,5 +58,13 @@
 /* Estilo dos titulos do formulário criar-empresa */
 .titulos-form{font-size: 12px; font-family: Arial; color: #808080;}
 
+/* estilo do texto de confirmação do cadastro da loja */
+.texto-form{font-size: 12px; font-family: Arial; color: #808080; background-color: #00CED1;}
+
+/* estilo do botão. Obs. Padrão para todos os botões */
 .btn-btn{width: auto; height: 25px; background-color: #00CED1; border: 2px solid #00CED1; color: white; border-radius: 3px;}
 .btn-btn:hover{border-color: #AFEEEE;}
+
+/* Estilo do link do formulário criar-empresa */
+.link{font-size: 12px; font-family: Arial; text-decoration: none; color: #008080;}
+.link:hover{color: #00ced1;}
