@@ -7,6 +7,11 @@
 {{--Início da div criar empresa-----------------------------------------------------------------------------------------}}
 <div id="criar-empresa">
 
+    @if (session('msg')){{--Mensagem confirmando o cadastro--}}
+    <p class="texto-form">{{ session('msg') }}</p>
+    @endif
+
+
     <p></p><h1 class="titulos-form">Cadastre sua Loja</h1>
     <form action="/empresas" method="POST" enctype="multipart/form-data">
         @csrf
@@ -42,6 +47,8 @@
             <p><input type="Submit" class="btn-btn" value="Cadastre"></p>
 
     </form>
+
+    <a href="/dashboard" class="link">Acessar Loja</a>
 
 </div>
 {{--Fim da div criar empresa--------------------------------------------------------------------------------------------}}
