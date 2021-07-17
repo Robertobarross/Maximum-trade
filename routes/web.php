@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\User;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,7 +30,14 @@ Route::get('/create-empresa', function () {
     return view('create-empresa');
 })->middleware('auth'); /* Rota criar loja */
 
+
 Route::post('/empresas', [EmpresaController::class, 'store'])->middleware('auth'); // Rota Controller das postagens //
+
+
+Route::get('/user/{user}', function (User $user) { // rota confirmação do usuário //
+    return $user;
+});
+
 
 
 
