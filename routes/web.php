@@ -15,13 +15,13 @@ use App\Models\User;
 */
 
 use App\Http\Controllers\EmpresaController;
-
+use App\Models\Empresa;
 
 Route::get('/', function () { /* Rota Home */
     return view('home');
 });
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+/*Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard'); /* Rota dashboard */
 
@@ -31,7 +31,10 @@ Route::get('/create-empresa', function () {
 })->middleware('auth'); /* Rota criar loja */
 
 
-Route::post('/empresas', [EmpresaController::class, 'store'])->middleware('auth'); // Rota Controller das postagens //
+Route::get('/dashboard', [EmpresaController::class, 'dashboard'])->middleware('auth'); // rota dashboard //
+
+
+Route::post('/empresas', [EmpresaController::class, 'store'])->middleware('auth'); // Rota Controller das postagens no banco de dados //
 
 
 Route::get('/user/{user}', function (User $user) { // rota confirmação do usuário //
