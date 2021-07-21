@@ -34,6 +34,7 @@
             @auth {{--Arquivo logout, para encerrar a sessão--}}
             <form action="/logout" method="POST">
             @csrf
+
             <a href="/logout" class="links-menu" onclick="event.preventDefault(); this.closest('form').submit();">Sair</a>
             </form>
             @endauth
