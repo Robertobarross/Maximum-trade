@@ -15,5 +15,12 @@
 <p>Você ainda não tem loja cadstrada, <a href="/create-empresa">Cadastrar Loja</a></p>
 @endif
 
+@auth
+    {{--Link para acessar empresa do usuário que está logado, está vinculado a rota show--}}
+<br><a href="/empresas/{{ $empresa->user_id }}" class="links-dashboard">Acessar minha loja</a>
+
+@endauth
+
+
 
 @endsection {{--Conteúdo--}}
