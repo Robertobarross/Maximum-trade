@@ -58,8 +58,16 @@ class EmpresaController extends Controller
         $empresaOwner = User::where('id', $empresa->user)->first()->toArray();
 
         return view('dashboard', ['empresas' => $empresas, 'empresaOwner' => $empresaOwner]);
+    }
+/*-----------------------------------------------------------------------------------------------------------------*/
 
 
+/*-----------------------------------------------------------------------------------------------------------------*/
+    public function show($id){ // Buscar loja do usuário que está logado //
+
+        $empresa = Empresa::findOrFail($id);
+
+        return view('show', ['empresa' => $empresa]);
     }
 /*-----------------------------------------------------------------------------------------------------------------*/
 
