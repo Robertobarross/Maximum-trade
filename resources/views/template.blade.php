@@ -28,7 +28,7 @@
             <a href="/register" class="links-menu">Cadastre-se</a>
             @endguest
 
-            <a href="/create-empresa" class="links-menu">Cadastrar Loja</a>
+            {{--<a href="/create-empresa" class="links-menu">Cadastrar Loja</a>--}}
             <a href="/" class="links-menu">Inicio</a>
 
             @auth {{--Arquivo logout, para encerrar a sessão--}}
