@@ -8,12 +8,12 @@
     @csrf
 
 
-{{ $empresa->id }}
+{{ $empresa->empresa }}
 
 </div>
 
 
-<h1>Aulas 22 até 25, para resolver autenticação de usuário</h1>
+<h1>24</h1>
 
 
 
