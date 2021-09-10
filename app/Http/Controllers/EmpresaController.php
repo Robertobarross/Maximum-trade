@@ -37,8 +37,8 @@ class EmpresaController extends Controller
         $empresa->alvara = $request->alvara;
         $empresa->complemento = $request->complemento;
 
-        $user_id = auth()->user(); // Para separar empresa por usuário //
-        $empresa->user_id = $user_id->id;
+        $user = auth()->user(); // Para separar empresa por usuário //
+        $empresa->user_id = $user->id;
 
         $empresa->save();// salva os arquivos no banco //
         return redirect('/create-empresa')->with('msg', 'Loja cadastradas com sucesso!');// Retornar para página criar empresa //
@@ -67,7 +67,12 @@ class EmpresaController extends Controller
 
         $empresa = Empresa::findOrFail($id);
 
-        return view('show', ['empresa' => $empresa]);
+        $user = auth()->user(); // Separar empresa por usuário //
+        $empresa->user = $user->id; // Buscar usuário //
+
+        $empresaOwner = User::where('id', $empresa->user)->first()->toArray();
+
+        return view('show', ['empresa' => $empresa, 'empresaOwner' => $empresaOwner]);
     }
 /*-----------------------------------------------------------------------------------------------------------------*/
 
