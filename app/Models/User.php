@@ -58,4 +58,8 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+    // para autenticação de usuário
+    public function empresas() {
+        return $this->hasMany('App\Models\Empresa');
+    }
 }
