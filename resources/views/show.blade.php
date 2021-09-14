@@ -4,19 +4,19 @@
 
 @section('content'){{--Conteúdo--}}
 
-<div>
-    @csrf
 
+
+@auth
+
+
+{{--{{ $empresaOwner['name'] }}--}}
 
 {{ $empresa->empresa }}
 
-</div>
-
-
-<h1>24</h1>
 
 
 
 
+@endauth
 
 @endsection
