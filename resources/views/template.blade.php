@@ -28,14 +28,16 @@
             <a href="/register" class="links-menu">Cadastre-se</a>
             @endguest
 
-            {{--<a href="/create-empresa" class="links-menu">Cadastrar Loja</a>--}}
-            <a href="/" class="links-menu">Inicio</a>
+            <a href="/create-empresa" class="links-menu">Cadastrar Loja</a>
+            {{--<a href="/" class="links-menu">Inicio</a>--}}
 
             @auth {{--Arquivo logout, para encerrar a sessão--}}
             <form action="/logout" method="POST">
             @csrf
 
             <a href="/logout" class="links-menu" onclick="event.preventDefault(); this.closest('form').submit();">Sair</a>
+            <a href="/" class="links-menu">Inicio</a>
+            <a href="/dashboard" class="links-menu">Loja</a>
             </form>
             @endauth
         </div>
@@ -88,7 +90,7 @@
 
     {{--Início da div rodapé--------------------------------------------------------------------------------------------}}
     <div id="rodape">
-        <h1 class="textos">&COPY; 2021 | E-Commerce | Maximum-trade | Todos os direitos reservados</h1>
+         <h1 class="textos">&COPY; 2021 | E-Commerce | Maximum-trade | Todos os direitos reservados</h1>
     </div>
     {{--Fim da div rodapé-----------------------------------------------------------------------------------------------}}
 
