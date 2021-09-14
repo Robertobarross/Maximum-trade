@@ -33,11 +33,11 @@
 
 /* Estilo padrão para os textos */
 .textos{font-size: 12px; font-family: Arial; color: #808080;}
-/* Fim do estilo do template  ----------------------------------------------------------------------------------------- */
+/* Fim do estilo do template  ---------- */
 
 
 
-/* Estilo do login -----------------------------------------------------------------------------------------------------*/
+/* Estilo do login ----------------------*/
 .img-login{width: 50px;}
 /* Fim do estilo login */
 
@@ -68,3 +68,23 @@
 /* Estilo do link do formulário criar-empresa */
 .link{font-size: 12px; font-family: Arial; text-decoration: none; color: #008080;}
 .link:hover{color: #00ced1;}
+
+/* Estilo da div dashboard */
+.dashboard{
+    width: 60%;
+    height: auto;
+    border: 1px solid #DCDCDC;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    color: #808080;
+    font-size: 14px;
+    font-family: Arial;
+    padding: 10px;
+}
+
+.linha{
+    width: 99%;
+    border: 1px solid #DCDCDC;
+}
