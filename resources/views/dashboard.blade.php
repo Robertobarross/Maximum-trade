@@ -5,22 +5,27 @@
 @section('content'){{--Conteúdo--}}
 
 
-@if(count($empresas) > 0)
-@foreach ($empresas as $empresa)
+<div class="dashboard">
+    @csrf
+    @auth
+    @if(count($empresas) > 0)
+    @foreach ($empresas as $empresa)
 
-{{ $empresa->empresa }}
+    <p>Usuário(a): {{ $empresaOwner['name'] }}</p>
+    <br>Loja: {{ $empresa->empresa }}</br>
+    <p>Endereço: {{ $empresa->endereco }} - Número: {{ $empresa->numero }} - Cidade: {{ $empresa->cidade }} - UF: {{ $empresa->uf }}</p>
 
-@endforeach
+    <br><a href="/cadprod">Cadastrar produtos!</a>
+    <p><a href="/produtos">Meus produtos!</a>
+    <p><a href="/">Ir as compras!</a>
 
-@else {{--Se o usuário não tiver loja cadastrada, será emitida a mensagem a baixo--}}
-<p>Você ainda não tem loja cadstrada, <a href="/create-empresa">Cadastrar Loja</a></p>
-@endif
+        <p class="linha"></p>
 
-@auth
-
-   {{--Link para acessar empresa do usuário que está logado, está vinculado a rota show--}}
-   <br><a href="/empresas/{{ $empresa->user_id }}" class="links-dashboard">Acessar minha loja</a>
-
-@endauth
+    @endforeach
+    @else
+    <p>Você não tem loja cadastrada! <a href="/create-empresa">Criar loja</a> </p>
+    @endif
+    @endauth
+</div>
 
 @endsection {{--Conteúdo--}}
