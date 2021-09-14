@@ -9,6 +9,7 @@ use Illuminate\Notifications\Notifiable;
 use Laravel\Fortify\TwoFactorAuthenticatable;
 use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Sanctum\HasApiTokens;
+use App\Models\Empresa;
 
 class User extends Authenticatable
 {
@@ -60,6 +61,7 @@ class User extends Authenticatable
     ];
     // para autenticação de usuário
     public function empresas() {
-        return $this->hasMany('App\Models\Empresa');
+       // return $this->hasMany('App\Models\Empresa');
+        return $this->hasOne('App\Models\Empresa');
     }
 }
