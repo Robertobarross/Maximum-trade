@@ -16,6 +16,10 @@ use App\Models\User;
 
 use App\Http\Controllers\EmpresaController;
 use App\Models\Empresa;
+use App\Http\Controllers\ProdutoController;
+use App\Models\Produto;
+
+
 
 /*-----------------------------------------------*/
 Route::get('/', function () { /* Rota Home */
@@ -60,7 +64,7 @@ Route::get('/user/{user}', function (User $user) { // rota confirmação do usu�
 
 
 /*-----------------------------------------------*/
-Route::get('/cadprod', [EmpresaController::class, 'cadprod'])->middleware('auth'); // Rota cadastrar produtos
+Route::get('/cadprod', [ProdutoController::class, 'store'])->middleware('auth'); // Rota cadastrar produtos
 /*-----------------------------------------------*/
 
 
