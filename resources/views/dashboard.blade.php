@@ -17,7 +17,6 @@
 
     <br><a href="/cadprod">Cadastrar produtos!</a>
     <p><a href="/produtos">Meus produtos!</a>
-    <p><a href="/">Ir as compras!</a>
 
         <p class="linha"></p>
 
@@ -26,6 +25,7 @@
     <p>Você não tem loja cadastrada! <a href="/create-empresa">Criar loja</a> </p>
     @endif
     @endauth
+    <p><a href="/">Ir as compras!</a>
 </div>
 
 @endsection {{--Conteúdo--}}
