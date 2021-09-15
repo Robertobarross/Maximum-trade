@@ -10,7 +10,7 @@ use App\Models\User; // Necessário para defineir o dono da Empresa //
 class EmpresaController extends Controller
 {
     /*--------------------------------*/
-    public function create(){ // Rota da página criar eventos //
+    public function create(){ // Rota da página criar empresa //
         return view('create-empresa');
     }
     /*--------------------------------*/
