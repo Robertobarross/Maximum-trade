@@ -83,19 +83,5 @@ class EmpresaController extends Controller
     }
 /*--------------------------------*/
 
-
-/* ------------------------------ */
-    public function cadprod(){ // Rota cadastrar produtos
-        return view('cadprod');
-    }
-/* ----------------------------- */
-
-
-/* ----------------------------- */
-    public function produtos(){
-        return view('produtos');
-    }
-/* ----------------------------- */
-
 }
 
