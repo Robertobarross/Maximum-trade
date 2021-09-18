@@ -17,11 +17,11 @@ class CreateProdutosTable extends Migration
         Schema::create('produtos', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->text("produto")->unique();
+            $table->text("prod")->unique();
             $table->file("foto");
             $table->text("informe");
             $table->text("valor");
-            $table->date("data");
+            $table->date("dt");
             $table->text("obs");
             $table->text("user_id");
         });
