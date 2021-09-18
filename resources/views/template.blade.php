@@ -19,7 +19,7 @@
     {{--Início da div top-----------------------------------------------------------------------------------------------}}
     <div id="topo">
         <div class="topo">
-            <img src="img/logo.jpeg" class="logo" alt="">
+            <img src="pasta-img/img/logo.jpeg" class="logo" alt="">
         </div>
 
         <div class="menu">
