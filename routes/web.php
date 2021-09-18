@@ -64,13 +64,19 @@ Route::get('/user/{user}', function (User $user) { // rota confirmação do usu�
 
 
 /*-----------------------------------------------*/
-Route::get('/cadprod', [ProdutoController::class, 'store'])->middleware('auth'); // Rota cadastrar produtos
+Route::get('/cadprod', [ProdutoController::class, 'cadprod'])->middleware('auth'); // Rota cadastrar produtos
 /*-----------------------------------------------*/
 
 
 
 /*-----------------------------------------------*/
-Route::get('produtos', [EmpresaController::class, 'produtos'])->middleware('auth'); // Rota produtos
+Route::post('/produtos', [ProdutoController::class, 'store'])->middleware('auth'); // Rota postar produtos no bd
+/*-----------------------------------------------*/
+
+
+
+/*-----------------------------------------------*/
+Route::get('produtos', [ProdutoController::class, 'produtos'])->middleware('auth'); // Rota meus produtos
 /*-----------------------------------------------*/
 
 
