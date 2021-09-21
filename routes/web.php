@@ -23,9 +23,11 @@ use App\Models\Produto;
 
 /*-----------------------------------------------*/
 Route::get('/', function () { /* Rota Home */
-    return view('home');
+   return view('home');
 });
 /*-----------------------------------------------*/
+
+//Route::get('/', [ProdutoController::class, 'home']);
 
 
 
@@ -78,6 +80,16 @@ Route::post('/produtos', [ProdutoController::class, 'store'])->middleware('auth'
 /*-----------------------------------------------*/
 Route::get('produtos', [ProdutoController::class, 'produtos'])->middleware('auth'); // Rota meus produtos
 /*-----------------------------------------------*/
+
+
+/*-----------------------------------------------*/
+Route::get('/produtos/edit/{id}', [ProdutoController::class, 'edit'])->middleware('auth');// Rota de Editar produtos //
+/*-----------------------------------------------*/
+
+
+Route::put('/produtos/update/{id}', [ProdutoController::class, 'update'])->middleware('auth'); // Para fazer a atualização da edição //
+
+
 
 
 
