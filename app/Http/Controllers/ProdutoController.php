@@ -62,4 +62,41 @@ public function produtos(){ // Rota meus produtos, mostra os prudos do ususário
 }
 /* ----------------------------- */
 
+
+/* ----------------------------- */
+public function edit($id){ // Publicando página de edição //
+
+    $user = auth()->user(); // Só aceita edição do dono do produto //
+
+    $produto =  Produto::findOrfail($id);
+
+    if($user->id != $produto->user_id){ // Só aceita edição do dono do produto //
+        return redirect('/produtos');
+    }
+
+    return view('edit', ['produto' => $produto]);
+}
+/* ----------------------------- */
+
+
+/* ----------------------------- */
+public function update(Request $request, ){ // Atualização da edição //
+
+    $foto = $request->all();
+
+            // Upload da imagem no banco de dados após edição //
+            if($request->hasFile('foto')  && $request->file('foto')->isValid()) {
+                $requestImage = $request->foto;
+                $extension = $requestImage->extension();
+                $imageName = md5($requestImage->getClientOriginalName() . strtotime("now")) . "." . $extension;
+                $requestImage->move(public_path('img/events'), $imageName);
+                $img['image'] = $imageName;
+            }
+
+    Produto::findOrfail($request->id)->update($foto);
+    return redirect('/produtos')->with('msg', 'Produto editado com sucesso!');
+}
+/* ----------------------------- */
+
+
 }
