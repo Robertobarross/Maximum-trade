@@ -5,6 +5,11 @@
 @section('content'){{--Conteúdo--}}
 
 <div id="produtos">
+
+    @if (session('msg')){{--Mensagem de atualização do produto--}}
+    <p class="texto-form">{{ session('msg') }}</p>
+    @endif
+
     @csrf
     @auth
     @if(count($produtos) > 0)
@@ -19,12 +24,12 @@
         <h4 class="camp-produtos">Obs: {{ $produto->obs }}</h4>
         <h5 class="camp-produtos">Código do produto: {{ $produto->id }}</h5>
 
-        <input type="Submit" class="btn-produtos" value="Editar">
+        <a href="/produtos/edit/{{ $produto->id }}"><button class="btn-produtos">Editar</button></a>
     </div>
 
    @endforeach
    @else
-   <p>Você não tem produtos cadastrados! <a href="/cadprod">Cadastre sue produto!</a> </p>
+   <p>Você não tem produtos cadastrados! <a href="/cadprod">Cadastre seu produto!</a> </p>
    @endif
    @endauth
 
