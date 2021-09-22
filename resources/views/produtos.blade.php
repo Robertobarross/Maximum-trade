@@ -14,7 +14,7 @@
     @auth
     @if(count($produtos) > 0)
     @foreach ($produtos as $produto)
-    <div id="post-produtos" class="col-md-12">
+    <div id="post-produtos">
         <p class="camp-produtos">Usuário(a): {{ $produtoOwner['name'] }} </p>
         <h1 class="camp-produtos">Produto: {{ $produto->prod }}</h1>
         <img src="/pasta-img/img/{{ $produto->foto }}" alt="{{ $produto->foto }}" class="img-produtos">
