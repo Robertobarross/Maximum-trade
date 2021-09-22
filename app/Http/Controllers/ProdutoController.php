@@ -9,6 +9,24 @@ use App\Models\User; // Necessário para defineir o dono da Empresa e do produto
 class ProdutoController extends Controller
 {
 
+/*-------------------------------*/
+public function home(){ // Na home aparecem todos os produtos
+    $produtos = Produto::all();
+
+    $search = request('search');
+    if($search){
+        $produtos = Produto::where([
+            ['prod', 'like', '%' .$search. '%']
+        ])->get();
+
+    } else {
+        $produtos = Produto::all(); // Pegando arquivos do bd, tabela produtos //
+    }
+    return view('home', ['produtos' => $produtos, 'search' => $search]);
+}
+/*-------------------------------*/
+
+
 /* ----------------------------- */
 public function store(Request $request){ // Para inserir informação do formulário no Banco de dados
 
@@ -97,6 +115,5 @@ public function update(Request $request, ){ // Atualização da edição //
     return redirect('/produtos')->with('msg', 'Produto editado com sucesso!');
 }
 /* ----------------------------- */
-
 
 }
