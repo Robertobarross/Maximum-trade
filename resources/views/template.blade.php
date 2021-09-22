@@ -6,9 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>@yield('title', 'Maximum-trade')</title>
 
-    {{--Extensão do arquivo CSS-----------------------------------------------------------------------------------------}}
+    {{--Link do ícone--}}
+    <link rel="shortcut icon" href="/pasta-img/img/m.trade.ico" type="imge/x-icon">
+    {{--Extensão do arquivo CSS--}}
     <link rel="stylesheet" href="css/style.css">
-    {{--Extensão do arquivo CSS-----------------------------------------------------------------------------------------}}
+    {{--Extensão do arquivo CSS--}}
     <script src="js/script.js"></script>
 
 </head>
@@ -16,10 +18,17 @@
 
 
 
-    {{--Início da div top-----------------------------------------------------------------------------------------------}}
+    {{--Início da div top--}}
     <div id="topo">
         <div class="topo">
-            <img src="pasta-img/img/logo.jpeg" class="logo" alt="">
+            <img src="pasta-img/img/logo.jpeg" class="logo" alt="Logomarca Maximum-Trade">
+            
+        {{--Incluindo o search--}}
+        <div class="search">
+            <form action="/" method="GET">
+                <input type="text" id="search" name="search" class="form-search" placeholder="Procurar produtos...">
+            </form>
+        </div>
         </div>
 
         <div class="menu">
@@ -42,17 +51,17 @@
             </form>
             @endauth
         </div>
-    {{--Fim da div top--------------------------------------------------------------------------------------------------}}
+    {{--Fim da div top--}}
 
 
 
 
-    @yield('content'){{--Onde vaificar o conteúdo exposto nas outras páginas, para não ficar a mesma do template--------}}
+    @yield('content'){{--Onde vaificar o conteúdo exposto nas outras páginas, para não ficar a mesma do template--}}
 
 
 
 
-    {{--Início da div centro--------------------------------------------------------------------------------------------}}
+    {{--Início da div centro--}}
     <div id="centro">
         {{--aqui vão ficar os links para outras pesquisas, tais como: quem somos, contato, etc. --}}
         <div class="div-links-centro">
@@ -84,16 +93,16 @@
         </div>
 
     </div>
-    {{--Fim da div centro-----------------------------------------------------------------------------------------------}}
+    {{--Fim da div centro--}}
 
 
 
 
-    {{--Início da div rodapé--------------------------------------------------------------------------------------------}}
+    {{--Início da div rodapé--}}
     <div id="rodape">
          <h1 class="textos">&COPY; 2021 | E-Commerce | Maximum-trade | Todos os direitos reservados</h1>
     </div>
-    {{--Fim da div rodapé-----------------------------------------------------------------------------------------------}}
+    {{--Fim da div rodapé--}}
 
 
 
