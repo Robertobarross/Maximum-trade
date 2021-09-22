@@ -19,15 +19,15 @@ use App\Models\Empresa;
 use App\Http\Controllers\ProdutoController;
 use App\Models\Produto;
 
-
-
-/*-----------------------------------------------*/
-Route::get('/', function () { /* Rota Home */
+/*
+Route::get('/', function () {
    return view('home');
 });
-/*-----------------------------------------------*/
+*/
 
-//Route::get('/', [ProdutoController::class, 'home']);
+/*-----------------------------------------------*/
+Route::get('/', [ProdutoController::class, 'home']); // Rota home produtos
+/*-----------------------------------------------*/
 
 
 
