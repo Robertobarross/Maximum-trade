@@ -18,4 +18,7 @@
 [link-travisci]: https://travis-ci.org/Robertobarross/Maximum-trade
 [link-codecov]: https://codecov.io/gh/Robertobarross/Maximum-trade
 
-b3a36e87-2f6a-460c-8037-404cd55e23b8
+[link-codecov]: b3a36e87-2f6a-460c-8037-404cd55e23b8
+
+[link-codecov]: codecov:
+[link-codecov]:  token: b3a36e87-2f6a-460c-8037-404cd55e23b8
