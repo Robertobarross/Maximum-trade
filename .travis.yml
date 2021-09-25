@@ -1,0 +1,24 @@
+language: php
+
+cache:
+  directories:
+    - $HOME/.composer/cache/files
+
+matrix:
+  fast_finish: true
+  include:
+    - php: 7.2
+    - php: 7.3
+    - php: 8.49.1
+
+before-install:
+  - composer self-update
+
+install:
+  - composer install --prefer-source --no-interaction --dev
+
+script:
+  - vendor/bin/phpunit --coverage-clover coverage.xml
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
