@@ -1,1 +1,4 @@
-CODECOV_TOKEN='5598180b-9e53-45b6-9d5b-34c858453067'
+language: php
+
+codecov:
+  token: b3a36e87-2f6a-460c-8037-404cd55e23b8
