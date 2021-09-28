@@ -89,7 +89,6 @@ Route::get('/produtos/edit/{id}', [ProdutoController::class, 'edit'])->middlewar
 
 Route::put('/produtos/update/{id}', [ProdutoController::class, 'update'])->middleware('auth'); // Para fazer a atualização da edição //
 
-
-
-
-
+/* -------------------------------------------- */
+Route::get('/produtos/carrinho/{id}', [ProdutoController::class, 'carrinho'])->middleware('auth'); // Rota comprar produtos
+/* -------------------------------------------- */
