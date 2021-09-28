@@ -116,4 +116,20 @@ public function update(Request $request, ){ // Atualização da edição //
 }
 /* ----------------------------- */
 
+
+/* ----------------------------- */
+public function carrinho(){ // Rota comprar produtos
+
+    $produtos = Produto::all()
+
+    ->where('user_id', auth()->user()->id); // Permite aparecer apenas dados do usuário logado
+
+    $user = auth()->user(); // Separar produto por usuário //
+    $produtos->user_id = $user->id; // Buscar usuário //
+    User::where('id', '=', $produtos->user_id)->first()->toArray();
+
+return view('carrinho', ['produtos' => $produtos]);
+}
+/* ----------------------------- */
+
 }
