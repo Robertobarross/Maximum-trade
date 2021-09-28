@@ -10,7 +10,7 @@
     <p class="texto-form">{{ session('msg') }}</p>
     @endif
 
-    <p class="camp-produtos">Usuário(a): {{ $produtoOwner['name'] }} </p>
+    <p class="camp-produtos">Usuário(a): {{ $produtoOwner['name'] }} --- Meus produtos cadastrados:</p>
     @csrf
     @auth
     @if(count($produtos) > 0)
