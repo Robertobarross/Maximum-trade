@@ -223,12 +223,12 @@
 }
 
 #post-produtos{
-    width: 15%;
+    width: 92%;
     height: auto;
     border: 1px solid #DCDCDC;
     border-radius: 5px;
-    margin-top: 30px;
-    margin: 50px;
+    margin-top: 10px;
+    margin-left: 4%;
     display: inline-block;
 }
 
@@ -241,7 +241,11 @@
 }
 
 .img-produtos{
-    width: 97%;
+    width: 3%;
+}
+
+.img-produtos-home{
+    width: 50%;
 }
 
 .btn-produtos{
@@ -252,6 +256,7 @@
     background-color: red;
     border-color: red;
     color: white;
+    float: right;
 }
 
 /* Estilizando produtos na home */
