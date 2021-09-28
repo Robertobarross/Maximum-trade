@@ -2,7 +2,7 @@
     <x-jet-authentication-card>
         <x-slot name="logo">
 
-            {{--Adaptações feitas na tela de login----------------------------------------------------------------------}}
+            {{--Adaptações feitas na tela de login-----------------------------}}
             <link rel="stylesheet" href="css/style.css">
             <img src="img/login.png" class="img-login" alt="">
             {{--Fim das adaptações feitas na tela de login--------------------------------------------------------------}}
