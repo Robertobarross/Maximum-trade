@@ -13,6 +13,10 @@
 {{--Aqui na home estão disponíveis todos os produtos--}}
 <div id="home-produtos">
 
+{{--Criei um form com os dados do produto para fazer a ponte entre o bd e o carrinho--}}
+<form action="/produtos" method="post" enctype="multipart/form-data">
+@csrf
+
 @if(count($produtos) > 0)
 @foreach ($produtos as $produto)
 <div id="produtos-home" align="center">
@@ -28,6 +32,8 @@
 </div>
 @endforeach
 @endif
+
+</form>
 
 </div>
 
