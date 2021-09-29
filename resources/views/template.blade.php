@@ -7,7 +7,7 @@
     <title>@yield('title', 'Maximum-trade')</title>
 
     {{--Link do ícone--}}
-    <link rel="shortcut icon" href="/pasta-img/img/m.trade.ico" type="imge/x-icon">
+    <link rel="shortcut icon" href="/pasta-img/img/m-trade.jpeg" type="imge/x-icon">
     {{--Extensão do arquivo CSS--}}
     <link rel="stylesheet" href="css/style.css">
     {{--Extensão do arquivo CSS--}}
@@ -22,7 +22,7 @@
     <div id="topo">
         <div class="topo">
             <img src="pasta-img/img/logo.jpeg" class="logo" alt="Logomarca Maximum-Trade">
-            
+
         {{--Incluindo o search--}}
         <div class="search">
             <form action="/" method="GET">
