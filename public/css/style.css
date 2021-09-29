@@ -279,11 +279,14 @@
 }
 
 .prod-home{
+    width: 90%;
+    min-height: 10px;
     color: #808080;
     font-size: 11px;
     font-family: Arial;
     text-align: justify;
-    margin: 12px;
+    display: block;
+    border: white;
 }
 
 /* Estilizando a div merchandising */
@@ -298,5 +301,5 @@
 
 .img-merchandising{
     width: 100%;
-    height: 350px;
+    height: 100%;
 }
