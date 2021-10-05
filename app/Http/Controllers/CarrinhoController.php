@@ -36,6 +36,7 @@ public function store(Request $request){ // Para inserir informação do formul�
 }
 /* ----------------------------- */
 
+/* ----------------------------- */
 public function carrinho(){
 
     $carrinhos = carrinho::all()
@@ -48,4 +49,15 @@ public function carrinho(){
 
     return view('carrinho', ['carrinhos' => $carrinhos, 'carrinhoOwner' => $carrinhoOwner ]);
 }
+/* ----------------------------- */
+
+/* ----------------------------- */
+public function destroy($id) { // Função delete //
+    Carrinho::findOrfail($id)->delete();
+    return redirect('/carrinho')->with('msg', 'Item excluido do carrinho!');
+}
+/* ----------------------------- */
+
+
+
 }
