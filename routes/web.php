@@ -95,3 +95,9 @@ Route::post('/carrinhos', [CarrinhoController::class, 'store'])->middleware('aut
 /* -------------------------------------------- */
 Route::get('/carrinho', [CarrinhoController::class, 'carrinho'])->middleware('auth'); // Rota meu carrinho
 /* -------------------------------------------- */
+
+/* -------------------------------------------- */
+Route::delete('/carrinhos/{id}', [CarrinhoController::class, 'destroy'])->middleware('auth');// Rota delete //
+/* -------------------------------------------- */
+
+
