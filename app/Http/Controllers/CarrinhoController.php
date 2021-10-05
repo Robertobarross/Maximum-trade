@@ -14,7 +14,7 @@ public function store(Request $request){ // Para inserir informação do formul�
     $carrinho = new Carrinho;
 
     $carrinho ->prod = $request->prod;
-    $carrinho ->informe = $request->informe;
+    $carrinho ->idprod = $request->idprod;
     $carrinho ->valor = $request->valor;
     $carrinho ->dt = $request->dt;
     $carrinho ->obs = $request->obs;
@@ -32,7 +32,20 @@ public function store(Request $request){ // Para inserir informação do formul�
     $carrinho ->user_id = $user->id;
 
     $carrinho ->save();// salva os arquivos no banco //
-    return redirect('/home')->with('msg', 'Produto adicionado ao carrinho!');// Retornar para página home //
+    return redirect('/carrinho')->with('msg', 'Produto adicionado ao carrinho!');// Retornar para página home //
 }
 /* ----------------------------- */
+
+public function carrinho(){
+
+    $carrinhos = carrinho::all()
+    ->where('user_id', auth()->user()->id); // Permite aparecer apenas dados do usuário logado
+
+    $user = auth()->user(); // Separar carrinho por usuário //
+    $carrinhos->user_id = $user->id; // Buscar usuário //
+
+    $carrinhoOwner = User::where('id', '=', $carrinhos->user_id)->first()->toArray();
+
+    return view('carrinho', ['carrinhos' => $carrinhos, 'carrinhoOwner' => $carrinhoOwner ]);
+}
 }
