@@ -353,7 +353,7 @@
 .btn-exluir-produto-carrinho{
     width: 20%;
     height: auto;
-    margin-left: 20px;
+    margin-left: 0px;
     background-color: red;
     color: white;
     border: red;
