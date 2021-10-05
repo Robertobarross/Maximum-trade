@@ -29,6 +29,7 @@
                 <input type="text" id="search" name="search" class="form-search" placeholder="Procurar produtos...">
             </form>
         </div>
+        <a href="/carrinho"><img src="/pasta-img/img/carrinho-de-compras.png" class="carrinho"/></a>
         </div>
 
         <div class="menu">
