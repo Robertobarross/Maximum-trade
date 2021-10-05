@@ -93,5 +93,5 @@ Route::put('/produtos/update/{id}', [ProdutoController::class, 'update'])->middl
 Route::post('/carrinhos', [CarrinhoController::class, 'store'])->middleware('auth');// Rota adicionar ao carrinho
 
 /* -------------------------------------------- */
-//Route::post('/carrinhos', [CarrinhoController::class, 'store'])->middleware('auth'); // Rota adicionar ao carrinho
+Route::get('/carrinho', [CarrinhoController::class, 'carrinho'])->middleware('auth'); // Rota meu carrinho
 /* -------------------------------------------- */
