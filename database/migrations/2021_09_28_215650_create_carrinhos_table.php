@@ -18,7 +18,7 @@ class CreateCarrinhosTable extends Migration
             $table->timestamps();
             $table->text("prod")->unique();
             $table->file("foto");
-            $table->text("informe");
+            $table->text("idprod");
             $table->text("valor");
             $table->date("dt");
             $table->text("obs");
