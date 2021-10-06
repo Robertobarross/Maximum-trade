@@ -47,17 +47,15 @@ public function carrinho(){
 
     $carrinhoOwner = User::where('id', '=', $carrinhos->user_id)->first()->toArray();
 
-    return view('carrinho', ['carrinhos' => $carrinhos, 'carrinhoOwner' => $carrinhoOwner ]);
+    return view('carrinho', ['carrinhos' => $carrinhos, 'carrinhoOwner' => $carrinhoOwner ])->with('msg', 'Seu carrinho está vazio :(');
 }
 /* ----------------------------- */
 
 /* ----------------------------- */
-public function destroy($id) { // Função delete //
-    Carrinho::findOrfail($id)->delete();
+public function destroy($prod) { // Função delete //
+    Carrinho::findOrfail($prod)->delete();
     return redirect('/carrinho')->with('msg', 'Item excluido do carrinho!');
 }
 /* ----------------------------- */
-
-
 
 }
