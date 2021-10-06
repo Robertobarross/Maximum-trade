@@ -23,6 +23,8 @@
         <h1 class="titulos-carrinho">Produto:
         <input type="Text" id="prod" name="prod" class="prod-carrinho" value="<?php echo  $carrinho->prod ?>" readonly/></h1>
 
+        {{ $carrinho->foto }}
+
         <h2 class="titulos-carrinho">Valor unitário:
         <input type="Text" id="prod" name="prod" class="prod-carrinho" value="<?php echo  $carrinho->valor ?>" readonly/></h2>
 
